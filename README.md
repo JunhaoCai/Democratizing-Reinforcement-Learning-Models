@@ -14,7 +14,7 @@
 
 2. [nn_DataProcess.py](nn%2Fnn_DataProcess.py)：运行此文件可以获得此项目会用到的.txt文件。
 
-3. [nn_main.py](nn%2Fnn_main.py)：可以得到模型。
+3. [nn_main.ipynb](nn%2Fnn_main.ipynb)：可以得到模型。
 
 ### 2. 关于朴素贝叶斯（Bayes）：
 1. [Bayes_Config.py](Bayes%2FBayes_Config.py)   :配置信息
