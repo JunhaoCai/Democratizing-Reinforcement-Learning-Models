@@ -9,10 +9,10 @@ class Config():
     embedding_dim = 50          # 词向量维度
     batch_size =64            # 批处理尺寸
     hidden_dim=100           # 隐藏层节点数
-    n_epoch = 30            # 训练迭代周期，即遍历整个训练样本的次数
-    lr = 0.0001               # 学习率；若opt=‘adadelta'，则不需要定义学习率
-    drop_keep_prob = 0.25        # dropout层，参数keep的比例
-    num_layers = 2              # LSTM层数
+    n_epoch = 50            # 训练迭代周期，即遍历整个训练样本的次数
+    lr = 0.00005               # 学习率；若opt=‘adadelta'，则不需要定义学习率
+    drop_keep_prob = 0.2        # dropout层，参数keep的比例
+    num_layers = 6              # LSTM层数
     bidirectional=True         #是否使用双向LSTM
     train_path = '../word2vec_data/train.txt'
     val_path = '../word2vec_data/validation.txt'
