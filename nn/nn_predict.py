@@ -22,6 +22,10 @@ def classify_review(comment, model):
     # 将词索引转换为张量
     words_tensor = torch.tensor(word_indices).unsqueeze(0)
     # print("words_tensor: ", words_tensor)
+    if torch.cuda.is_available():
+        device = torch.device('cuda:0')
+        model.to(device)
+        words_tensor = words_tensor.to(device)
 
     # 使用模型进行分类
     with torch.no_grad():
