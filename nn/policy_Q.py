@@ -8,12 +8,15 @@ from nn_predict import classify_review
 # 加载预训练的词向量模型
 model = gensim.models.KeyedVectors.load_word2vec_format("../word2vec_data/wiki_word2vec_50.bin", binary=True)
 
+
 # 加载训练好的模型参数
 svm_model = joblib.load('../SVM/SVM_model.pkl')
 naive_bayes_model = joblib.load('../Bayes/NaiveBayes_model.pkl')
 decision_tree_model = joblib.load('../DecisionTree/GridSearch_decision_tree_model.pkl')
 random_forest_model = joblib.load('../RandomForest/RandomForest_model.pkl')
 neural_network_model = torch.load('../nn/nn_models/nn_model_epoch_12.pkl')
+neural_network_model = neural_network_model.to('cpu')  # 将神经网络模型移到CPU上
+
 
 # 读取权重文件
 def read_weights():
